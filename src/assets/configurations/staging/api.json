@@ -1,0 +1,6 @@
+{
+	"api": {
+		"domain": "https://pokeapi.co",
+		"prefix": "api/v2"
+	}
+}

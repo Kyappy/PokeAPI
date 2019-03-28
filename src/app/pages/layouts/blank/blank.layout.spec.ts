@@ -1,17 +1,17 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {RouterTestingModule} from '@angular/router/testing';
-import {AppComponent} from './app.component';
+import {BlankLayout} from './blank.layout';
 
 describe('AppComponent', () => {
 	// region global
-	let component: AppComponent;
-	let fixture: ComponentFixture<AppComponent>;
+	let component: BlankLayout;
+	let fixture: ComponentFixture<BlankLayout>;
 	// endregion
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
 			declarations: [
-				AppComponent
+				BlankLayout
 			],
 			imports: [
 				RouterTestingModule
@@ -20,7 +20,7 @@ describe('AppComponent', () => {
 			throw new Error('AppComponent test initialization failure');
 		});
 
-		fixture = TestBed.createComponent(AppComponent);
+		fixture = TestBed.createComponent(BlankLayout);
 		component = fixture.componentInstance;
 	}));
 

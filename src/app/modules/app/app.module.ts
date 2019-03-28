@@ -1,20 +1,27 @@
+import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {AppComponent} from '../../components';
+import {API_TOKEN} from '@application/configurations';
+import {BlankLayout} from '../../pages';
+import {ConfigurationModule} from '../utilities/configuration.module';
 import {AppRoutingModule} from './app-routing.module';
 
 /**
  * Application main module.
  */
 @NgModule({
-	bootstrap: [AppComponent],
+	bootstrap: [BlankLayout],
 	declarations: [
-		AppComponent
+		BlankLayout
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule
+		AppRoutingModule,
+		HttpClientModule,
+		ConfigurationModule
 	],
-	providers: []
+	providers: [
+		{provide: API_TOKEN, useValue: {}}
+	]
 })
 export class AppModule {}

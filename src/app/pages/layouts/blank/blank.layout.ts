@@ -5,9 +5,9 @@ import {Component} from '@angular/core';
  */
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.component.html'
+	templateUrl: './blank.layout.html'
 })
-export class AppComponent {
+export class BlankLayout {
 	/**
 	 * Application title.
 	 */

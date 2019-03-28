@@ -3,9 +3,10 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {AppModule} from '../../app/modules/app/app.module';
+import {Environment} from '../../environments/enum/environement';
 import {ENVIRONMENT} from '../../environments/environment';
 
-if (ENVIRONMENT.production) {
+if (ENVIRONMENT !== Environment.Development) {
 	enableProdMode();
 }
 
