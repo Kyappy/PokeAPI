@@ -1,17 +1,21 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {HomePage, MainLayout} from '../../pages';
 
 const ROUTES: Routes = [
-	// {
-	// 	children: [
-	// 		// {path: '', component: DashboardPage}
-	// 	],
-	// 	// component: MainLayout,
-	// 	path: ''
-	// },
 	{
-		loadChildren: '../../../features/pokemon/modules/pokemon-feature.module#PokemonFeatureModule',
-		path: 'pokemons'
+		children: [
+			{
+				component: HomePage,
+				path: ''
+			},
+			{
+				loadChildren: '../../../features/pokemon/modules/pokemon-feature.module#PokemonFeatureModule',
+				path: 'pokemons'
+			}
+		],
+		component: MainLayout,
+		path: ''
 	}
 ];
 

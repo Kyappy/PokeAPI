@@ -24,6 +24,15 @@ export class PokemonService {
 	public constructor(private readonly _HTTP: HttpClient, private readonly _REST_SERVICE: RestService) {}
 
 	/**
+	 * Performs a get query on the rest url.
+	 * @param url The rest url to get.
+	 * @returns The request result.
+	 */
+	public get$<T>(url: string): Observable<T> {
+		return this._HTTP.get<T>(url);
+	}
+
+	/**
 	 * List all of the Pokemons.
 	 * @returns Pokemon collection observable.
 	 */

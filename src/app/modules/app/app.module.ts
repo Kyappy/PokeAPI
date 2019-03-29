@@ -1,8 +1,9 @@
 import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {API_TOKEN} from '@application/configurations';
-import {BlankLayout} from '../../pages';
+import {NavbarComponent} from '../../components';
+import {API_TOKEN} from '../../configurations';
+import {BlankLayout, HomePage, MainLayout} from '../../pages';
 import {ConfigurationModule} from '../utilities/configuration.module';
 import {AppRoutingModule} from './app-routing.module';
 
@@ -12,7 +13,10 @@ import {AppRoutingModule} from './app-routing.module';
 @NgModule({
 	bootstrap: [BlankLayout],
 	declarations: [
-		BlankLayout
+		NavbarComponent,
+		BlankLayout,
+		MainLayout,
+		HomePage
 	],
 	imports: [
 		BrowserModule,

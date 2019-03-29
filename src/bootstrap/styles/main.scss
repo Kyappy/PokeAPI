@@ -1,0 +1,21 @@
+// Libraries base
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+
+// Project overrides
+
+@import "../../scss/overrides/overrides";
+
+// Libraries core
+
+@import "~bootstrap/scss/bootstrap";
+
+// Project
+
+@import "../../scss/variables/variables";
+@import "../../scss/functions/functions";
+@import "../../scss/mixins/mixins";
+@import "../../scss/fonts/fonts";
+@import "../../scss/components/components";
+@import "../../scss/utilities/utilities";

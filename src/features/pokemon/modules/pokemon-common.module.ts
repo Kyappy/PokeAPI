@@ -1,6 +1,7 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
-import {PokemonItemComponent, PokemonListComponent} from '../components';
+import {TypeModule} from '@features/type';
+import {PokemonItemComponent, PokemonListComponent, PokemonRowComponent} from '../components';
 
 /**
  * Pokemon common module.
@@ -8,14 +9,16 @@ import {PokemonItemComponent, PokemonListComponent} from '../components';
 @NgModule({
 	declarations: [
 		PokemonItemComponent,
-		PokemonListComponent
+		PokemonListComponent,
+		PokemonRowComponent
 	],
 	exports: [
 		PokemonItemComponent,
 		PokemonListComponent
 	],
 	imports: [
-		CommonModule
+		CommonModule,
+		TypeModule
 	]
 })
 export class PokemonCommonModule {}

@@ -1,2 +1,19 @@
-<div *ngFor="let pokemon of pokemons">{{ pokemon.name }}</div>
+<!--<div appPokemonRow></div>-->
 
+<!--<div *ngFor="let pokemon of pokemons">{{ pokemon.name }}</div>-->
+
+<table class="table">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col"></th>
+			<th scope="col">Name</th>
+			<th scope="col">Types</th>
+			<th scope="col">Height</th>
+			<th scope="col">Weight</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let pokemon of pokemons" [appPokemonRow]="pokemon"></tr>
+	</tbody>
+</table>
