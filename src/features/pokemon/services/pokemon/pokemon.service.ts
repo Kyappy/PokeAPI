@@ -24,11 +24,20 @@ export class PokemonService {
 	public constructor(private readonly _HTTP: HttpClient, private readonly _REST_SERVICE: RestService) {}
 
 	/**
+	 * Get a pokemon by id.
+	 * @param id The id of the pokemon to get.
+	 * @returns The pokemon found.
+	 */
+	public get$(id: number): Observable<Pokemon> {
+		return this._HTTP.get<Pokemon>(this._REST_SERVICE.url(`${this._route}/${id}`));
+	}
+
+	/**
 	 * Performs a get query on the rest url.
 	 * @param url The rest url to get.
 	 * @returns The request result.
 	 */
-	public get$<T>(url: string): Observable<T> {
+	public getUrl$<T>(url: string): Observable<T> {
 		return this._HTTP.get<T>(url);
 	}
 

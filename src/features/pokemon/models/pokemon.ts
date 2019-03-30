@@ -6,6 +6,16 @@ import {Sprites} from './sprites';
  */
 export class Pokemon {
 	/**
+	 * The pokemon abilities.
+	 */
+	public abilities: {ability: { name: string}}[];
+
+	/**
+	 * Base experience.
+	 */
+	public base_experience: number;
+
+	/**
 	 * The pokemon name.
 	 */
 	public height: number;
@@ -16,19 +26,24 @@ export class Pokemon {
 	public id: number;
 
 	/**
+	 * The pokemon moves.
+	 */
+	public moves: { move: { name: string } }[];
+
+	/**
 	 * The pokemon name.
 	 */
 	public name: string;
 
 	/**
-	 * The pokemon order.
+	 * The pokemon sprites.
 	 */
-	public order: number;
+	public sprites: Sprites;
 
 	/**
 	 * The pokemon sprites.
 	 */
-	public sprites: Sprites;
+	public stats: { base_stat: number; effort: number; stat: {name: string}}[];
 
 	/**
 	 * The pokemon types.

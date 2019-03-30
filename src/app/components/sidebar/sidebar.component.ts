@@ -12,7 +12,7 @@ export class SidebarComponent implements OnInit {
 	/**
 	 * The navbar links
 	 */
-	@Input() public links: {label: string; path: string}[] = [];
+	@Input() public links: {exact: boolean; label: string; path: string}[] = [];
 
 	/**
 	 * The navbar width;

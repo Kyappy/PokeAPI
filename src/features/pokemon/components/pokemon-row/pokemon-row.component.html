@@ -6,3 +6,6 @@
 </td>
 <td>{{ pokemon?.height / 10 }} m</td>
 <td>{{ pokemon?.weight / 10 }} kg</td>
+<td class="text-primary">
+	<button class="btn px-1 py-0 btn-outline-secondary" [routerLink]="'/pokemons/details/' + pokemon?.id">Details</button>
+</td>

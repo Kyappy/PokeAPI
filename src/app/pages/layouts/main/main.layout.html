@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<app-sidebar [links]="[{label: 'Home', path: '/'}, {label: 'Pokémons', path: '/pokemons'}]">
+<app-sidebar [links]="[{label: 'Home', path: '/', exact: true}, {label: 'Pokémons', path: '/pokemons', exact: false}]">
 	<router-outlet></router-outlet>
 </app-sidebar>
 

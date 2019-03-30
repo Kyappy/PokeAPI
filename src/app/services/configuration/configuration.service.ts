@@ -23,8 +23,6 @@ export class ConfigurationService {
 	public async load(tokens: {}): Promise<void> {
 		const PROMISES: Promise<void>[] = [];
 
-		console.log(ENVIRONMENT);
-
 		for (const TOKEN in tokens) {
 			if (!tokens.hasOwnProperty(TOKEN)) continue;
 			PROMISES.push(this._HTTP.get(`./assets/configurations/${ENVIRONMENT}/${TOKEN}.json`).toPromise().then((data: {}) => {

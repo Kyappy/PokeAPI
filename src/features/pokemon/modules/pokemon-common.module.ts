@@ -1,5 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {TypeModule} from '@features/type';
 import {PokemonItemComponent, PokemonListComponent, PokemonRowComponent} from '../components';
 
@@ -18,6 +19,7 @@ import {PokemonItemComponent, PokemonListComponent, PokemonRowComponent} from '.
 	],
 	imports: [
 		CommonModule,
+		RouterModule,
 		TypeModule
 	]
 })

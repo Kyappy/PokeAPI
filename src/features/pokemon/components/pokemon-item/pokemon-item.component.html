@@ -1,1 +1,51 @@
-Pokemon item
+<div class="card shadow-sm">
+	<div class="card-body">
+		<div class="media">
+			<img [src]="pokemon?.sprites.front_default" class="mr-3" [alt]="pokemon?.name">
+			<div class="media-body">
+				<div class="float-right">
+					<app-type-item *ngFor="let value of pokemon?.types" [type]="value.type"></app-type-item>
+				</div>
+				<h4 class="mt-0 mb-3 text-capitalize">#{{ pokemon?.id }} {{ pokemon?.name }}</h4>
+				<div class="row">
+					<div class="col-2">
+						<h5>General</h5>
+						Height: {{ pokemon?.height / 10 }} m<br/>
+						Weight: {{ pokemon?.weight / 10 }} kg<br/>
+						Base experience: {{ pokemon?.base_experience }} pts
+					</div>
+					<div class="col-2">
+						<h5>Abilities</h5>
+						<div *ngFor="let value of pokemon?.abilities">
+							{{ value.ability.name }}
+						</div>
+					</div>
+					<div class="col">
+						<h5>Moves</h5>
+						<span class="badge badge-primary mr-1" *ngFor="let value of pokemon?.moves">{{ value.move.name }}</span>
+					</div>
+				</div>
+				<br/>
+
+			</div>
+		</div>
+	</div>
+	<table class="table col mb-0">
+		<thead>
+			<tr>
+				<th></th>
+				<th *ngFor="let value of pokemon?.stats">{{ value.stat.name }}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Base stat</th>
+				<td *ngFor="let value of pokemon?.stats">{{ value.base_stat }}</td>
+			</tr>
+			<tr>
+				<th scope="row">Effort</th>
+				<td *ngFor="let value of pokemon?.stats">{{ value.effort }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
