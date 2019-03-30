@@ -1,3 +1,4 @@
-<h1>List page</h1>
-List page content
-<app-pokemon-list [pokemons]="pokemons"></app-pokemon-list>
+<h1 class="mb-4">Pokémon list</h1>
+<app-pokemon-list [pokemons]="pokemonsQuery?.results"></app-pokemon-list>
+<button *ngIf="pokemonsQuery?.previous != null" (click)="changePage(pokemonsQuery.previous)" class="btn btn-outline-primary">< Previous</button>
+<button *ngIf="pokemonsQuery?.next != null" (click)="changePage(pokemonsQuery.next)" class="btn btn-outline-primary float-right">Next ></button>

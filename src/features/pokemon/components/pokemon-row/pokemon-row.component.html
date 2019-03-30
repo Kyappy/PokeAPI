@@ -1,8 +1,8 @@
-<td>{{ pokemon?.order }}</td>
+<td>{{ pokemon?.id }}</td>
 <td><img [src]="pokemon?.sprites.front_default" alt="{{ pokemon?.name }} sprite" class="pokemon-icon"></td>
 <td class="text-capitalize">{{ pokemon?.name }}</td>
 <td>
 	<app-type-item *ngFor="let value of pokemon?.types" [type]="value.type"></app-type-item>
 </td>
-<td>{{ pokemon?.height }} cm</td>
-<td>{{ pokemon?.weight }} kg</td>
+<td>{{ pokemon?.height / 10 }} m</td>
+<td>{{ pokemon?.weight / 10 }} kg</td>

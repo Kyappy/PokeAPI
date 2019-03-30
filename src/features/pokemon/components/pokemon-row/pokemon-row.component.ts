@@ -30,10 +30,7 @@ export class PokemonRowComponent implements OnInit {
 
 	// region public methods
 	public ngOnInit(): void {
-		this._POKEMON_SERVICE.get$(this._pokemon.url).subscribe((pokemon: Pokemon) => {
-			console.log(pokemon);
-			this.pokemon = pokemon;
-		});
+		this._POKEMON_SERVICE.get$(this._pokemon.url).subscribe((pokemon: Pokemon) => this.pokemon = pokemon);
 	}
 	// endregion
 }

@@ -1,0 +1,33 @@
+/* stylelint-disable scss/dollar-variable-default  */
+
+$body-bg: $gray-100;
+
+$list-group-active-bg: $gray-900;
+$list-group-active-border-color: $list-group-active-bg;
+
+// List group
+
+$list-group-color: $gray-500;
+$list-group-bg: transparent;
+$list-group-border-color: rgba($black, .125) !default;
+$list-group-border-width: $border-width !default;
+$list-group-border-radius: $border-radius !default;
+
+$list-group-item-padding-y: .75rem !default;
+$list-group-item-padding-x: 1.25rem !default;
+
+$list-group-hover-bg: $gray-900;
+$list-group-active-color: $gray-200;
+$list-group-active-bg: $gray-900;
+$list-group-active-border-color: $list-group-active-bg;
+
+$list-group-disabled-color: $gray-600 !default;
+$list-group-disabled-bg: $list-group-bg !default;
+
+$list-group-action-color: $gray-700 !default;
+$list-group-action-hover-color: $gray-200;
+
+$list-group-action-active-color: $gray-200;
+$list-group-action-active-bg: $gray-900;
+
+/* stylelint-enable */

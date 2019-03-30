@@ -1,5 +1,5 @@
 import {HttpClient} from '@angular/common/http';
-import {Inject, Injectable} from '@angular/core';
+import {Injectable} from '@angular/core';
 import {IRestQuery, RestService} from '@features/rest';
 import {Observable} from 'rxjs/internal/Observable';
 import {Pokemon} from '../../models';
@@ -34,9 +34,11 @@ export class PokemonService {
 
 	/**
 	 * List all of the Pokemons.
+	 * @param page The page to get.
+	 * @param limit The list limit.
 	 * @returns Pokemon collection observable.
 	 */
-	public list$(): Observable<IRestQuery<Pokemon[]>> {
-		return this._HTTP.get<IRestQuery<Pokemon[]>>(this._REST_SERVICE.url(this._route));
+	public list$(page: number = 0, limit: number = 15): Observable<IRestQuery<Pokemon[]>> {
+		return this._HTTP.get<IRestQuery<Pokemon[]>>(this._REST_SERVICE.url(`${this._route}?limit=${limit}&offset=${page * limit}`));
 	}
 }

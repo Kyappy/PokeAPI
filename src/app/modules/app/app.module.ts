@@ -1,6 +1,7 @@
 import {HttpClientModule} from '@angular/common/http';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {SidebarComponent} from '@application/components/sidebar/sidebar.component';
 import {NavbarComponent} from '../../components';
 import {API_TOKEN} from '../../configurations';
 import {BlankLayout, HomePage, MainLayout} from '../../pages';
@@ -14,6 +15,7 @@ import {AppRoutingModule} from './app-routing.module';
 	bootstrap: [BlankLayout],
 	declarations: [
 		NavbarComponent,
+		SidebarComponent,
 		BlankLayout,
 		MainLayout,
 		HomePage
